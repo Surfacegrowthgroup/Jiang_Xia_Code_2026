@@ -7,11 +7,11 @@ MATLAB code and Origin data for the paper "Long-range temporal and spatial corre
 ## Overview
 
 This repository contains the source code and datasets associated with the manuscript:  
-**"[Long-range temporal and spatial correlations in discrete kinetic roughening: A large deviation approach]"**.
+**"Long-range temporal and spatial correlations in discrete kinetic roughening: A large deviation approach"**.
 
 The MATLAB functions provided here are designed to perform the following tasks:
 1.  **High-Precision Simulation:** Calculate the height probability distributions using the Large Deviation Algorithm for Ballistic Deposition (BD) and Restricted Solid-on-Solid (RSOS) models, specifically incorporating long-range correlations.
-2.  **Finite-Time Analysis:** Predict and select appropriate simulation times (`time`) by analyzing the skewness (S) and kurtosis (K) of the height distribution to address finite-time effects.
+2.  **Finite-Time Analysis:** Predict and select appropriate simulation times (`time`) by analyzing the skewness ($S$) and kurtosis ($K$) of the height distribution to address finite-time effects.
 3.  **Microstructure Statistics:** Implement a novel statistical method for analyzing surface microstructures.
 
 ##  Repository Structure
@@ -20,23 +20,23 @@ The MATLAB functions provided here are designed to perform the following tasks:
     * `Large_Deviation_Algorithm/`: Codes for calculating height probability distributions.
     * `Pre_Measurement_of_S&K/`: Codes for pre-calculating Skewness and Kurtosis to determine simulation time.
     * `Microstructure_Statistic/`: Codes for microstructure statistical analysis.
-* `figure_data_origin/`: Original OriginPro project files (`.opju`) containing the figures presented in the paper.The `.opju` files located in this directory contain the high-precision distribution plots, along with the Skewness ($S$) and Kurtosis ($K$) analysis results. **Crucially, the raw datasets are embedded directly within these project files.**
+* `figure_data_origin/`: Original OriginPro project files (`.opju`) containing the figures presented in the paper.The `.opju` files located in this directory contain the high-precision distribution plots, along with the $S$ and $K$ analysis results. **Crucially, the raw datasets are embedded directly within these project files.**
 
 ---
 
 ##  Simulation Usage Guide
 
-The following examples illustrate the workflow using the **Ballistic Deposition (BD) model with long-range temporal correlations**.
+The following examples illustrate the workflow using the **BD model with long-range temporal correlations**.
 
 ### Step 1: Pre-determination of Simulation Parameters
-**Objective:** To determine the correct simulation time window by analyzing finite-time effects on Skewness (S) and Kurtosis (K).
+**Objective:** To determine the correct simulation time window by analyzing finite-time effects on $S$ and $K$.
 
 1.  Navigate to the directory: `/src_matlab/Pre_Measurement_of_S&K`.
 2.  Run the following command in the MATLAB Command Window:
     ```matlab
     res_H = BDFFGN_TC_SK(256, 6000, 10, 0.1);
     ```
-3.  **Output Analysis:** Process the output data to plot **S vs. time** or **K vs. time**. Use these plots to select the appropriate simulation time (`time`) where the system reaches the stationary state regime.
+3.  **Output Analysis:** Process the output data to plot **$S$ vs. time** or **$K$ vs. time**. Use these plots to select the appropriate simulation time (`time`) where the system reaches the stationary state regime.
 
 ### Step 2: Large Deviation Simulation
 **Objective:** To simulate the height probability distribution using the Markov Chain Monte Carlo (MCMC) method.
