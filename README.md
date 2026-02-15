@@ -29,19 +29,19 @@ The MATLAB functions provided here are designed to perform the following tasks:
 The following examples illustrate the workflow using the **BD model with long-range temporal correlations**.
 
 ### Step 1: Pre-determination of Simulation Parameters
-**Objective:** To determine the correct simulation time window by analyzing finite-time effects on $S$ and $K$.
+**Objective:** To determine the correct simulation time window by minimaling finite-time effects on $S$ and $K$.
 
 1.  Navigate to the directory: `/src_matlab/Pre_Measurement_of_S&K`.
 2.  Run the following command in the MATLAB Command Window:
     ```matlab
     res_H = BDFFGN_TC_SK(256, 6000, 10, 0.1);
     ```
-3.  **Output Analysis:** Process the output data to plot **$S$ vs. time** or **$K$ vs. time**. Use these plots to select the appropriate simulation time (`time`) where the system reaches the stationary state regime.
+3.  **Output Analysis:** Process the output data to plot **$S$ vs. time** or **$K$ vs. time**. Use these plots to select the appropriate simulation time (`time`).
 
 ### Step 2: Large Deviation Simulation
-**Objective:** To simulate the height probability distribution using the Markov Chain Monte Carlo (MCMC) method.
+**Objective:** To simulate the height probability distribution using the importance sampling method.
 
-This module covers ordinary BD/RSOS models and those with long-range temporal/spatial correlations. The main functions follow the naming pattern `MCMC_*_*.m`, corresponding to specific sub-functions `BD*_*.m`.
+This module covers ordinary BD/RSOS models and those with long-range temporal/spatial correlations. The main functions follow the naming pattern `MCMC_*_*.m`, corresponding to specific sub-functions `BD/RSOS*_*.m`.
 
 1.  Navigate to the directory: `/src_matlab/Large_Deviation_Algorithm`.
 2.  Run the main simulation function. For example:
