@@ -1,4 +1,4 @@
-# Jiang_Xia_Code_2026
+# Long-range temporal-and-spatial-correlations-in-discrete
 MATLAB code and Origin data for the paper "Long-range temporal and spatial correlations in discrete kinetic roughening: A large deviation approach"
 # MATLAB Simulation Codes and Datasets for Surface Growth Dynamics
 
