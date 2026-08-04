@@ -1,4 +1,4 @@
-# Long-range temporal-and-spatial-correlations-in-discrete
+# Long-range-correlations-in-discrete-kinetic-roughening-A-large-deviation-approach
 MATLAB code and Origin data for the paper "Long-range temporal and spatial correlations in discrete kinetic roughening: A large deviation approach"
 # MATLAB Simulation Codes and Datasets for Surface Growth Dynamics
 
